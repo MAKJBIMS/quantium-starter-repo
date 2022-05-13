@@ -1,5 +1,5 @@
 """
-Following code merge transaction data for Soul Foods’s entire morsel line from 3 csv files into single file. Data from 3 csv files is filtered based on product named "Pink Morsels". Total sales for a given day is calculated using price and quantity data. Finally Sales,Date and Region data from 3 csv files is merged into a single csv file named "merged_daily_sales_data.csv".
+Following code merges transaction data for Soul Foods’s entire morsel line from 3 csv files into single file. Data from 3 csv files is filtered based on product named "Pink Morsels". Total sales for a given day is calculated using price and quantity data. Finally Sales,Date and Region data from 3 csv files is merged into a single csv file named "merged_daily_sales_data.csv".
 """
 
 import pandas as pd
