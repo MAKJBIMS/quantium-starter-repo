@@ -5,9 +5,9 @@ Following code merges transaction data for Soul Foods’s entire morsel line fro
 import pandas as pd
 
 # Read data from csv file
-daily_sales_data_0 = pd.read_csv('./data/daily_sales_data_0.csv', parse_dates=['date'], index_col="product")
-daily_sales_data_1 = pd.read_csv('./data/daily_sales_data_1.csv', parse_dates=['date'], index_col="product")
-daily_sales_data_2 = pd.read_csv('./data/daily_sales_data_2.csv', parse_dates=['date'], index_col="product")
+daily_sales_data_0 = pd.read_csv('../data/daily_sales_data_0.csv', parse_dates=['date'], index_col="product")
+daily_sales_data_1 = pd.read_csv('../data/daily_sales_data_1.csv', parse_dates=['date'], index_col="product")
+daily_sales_data_2 = pd.read_csv('../data/daily_sales_data_2.csv', parse_dates=['date'], index_col="product")
 
 
 # Function filters out sales data of "pink morsel" for all regions
@@ -27,4 +27,4 @@ daily_sales_data = data_processing(daily_sales_data_0)
 daily_sales_data = pd.concat([daily_sales_data, data_processing(daily_sales_data_1)])
 daily_sales_data = pd.concat([daily_sales_data, data_processing(daily_sales_data_2)])
 
-daily_sales_data.to_csv('./data/merged_daily_sales_data.csv', index=False)
+daily_sales_data.to_csv('merged_daily_sales_data.csv', index=False)
