@@ -1,4 +1,4 @@
-# Task 4 : Improve Your Dash Application
+# Task 5 : Test Your Dash Application
 """
 This  Dash application  will enable Soul Foods to dig into region-specific sales data for Pink Morsels.
 """
@@ -32,7 +32,7 @@ header = html.H1(
 region_picker = dcc.RadioItems(
     np.insert(daily_sales_data['region'].unique(), 0, 'all'),
     daily_sales_data['region'].unique()[0],
-    id='sales-region',
+    id='sales-region-picker',
     inline=True
 )
 
@@ -55,7 +55,6 @@ app.layout = html.Div([
     header,
     line_separator,
     region_picker_wrapper,
-    # region_picker,
     line_separator,
     visualization
 
@@ -69,7 +68,7 @@ app.layout = html.Div([
 
 @app.callback(
     Output('graph-with-radio-button', 'figure'),
-    Input('sales-region', 'value'))
+    Input('sales-region-picker', 'value'))
 def update_figure(selected_region):
     filtered_daily_sales_data = daily_sales_data
     if selected_region != 'all':
